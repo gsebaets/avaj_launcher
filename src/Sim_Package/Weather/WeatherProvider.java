@@ -22,10 +22,10 @@ public class WeatherProvider
 
     public String getCurrentWeather(Coordinates coordinates)
     {
-        Random randWeather = new Random();
+        Random random = new Random();
 
-        int nWeather = 0;
-        nWeather = randWeather.nextInt(4);
-        return (weather[nWeather]);
+        int i = 0;
+        i = random.nextInt(4);
+        return (weather[i]);
     }
 }
