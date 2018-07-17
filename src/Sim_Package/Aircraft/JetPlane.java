@@ -10,11 +10,15 @@ public class JetPlane extends Aircraft implements Flyable {
         super(name, coordinates);
     }
 
-    public void updateCondtions() {
+    public void updateConditions() {
 
     }
 
     public void registerTower(WeatherTower weatherTower) {
+
+    }
+
+    public void unregisterTower(WeatherTower weatherTower) {
 
     }
 }
