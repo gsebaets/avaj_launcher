@@ -9,7 +9,7 @@ public class WeatherTower {
         return weather;
     }
 
-    void changeWeather()
+    public void changeWeather()
     {
 
     }
