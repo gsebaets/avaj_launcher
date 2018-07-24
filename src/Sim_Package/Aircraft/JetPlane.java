@@ -1,8 +1,7 @@
 package Sim_Package.Aircraft;
 
 import Sim_Package.Coordinates;
-import Sim_Package.Weather.WeatherTower;
-import Sim_Package.WriteToFile;
+import Sim_Package.Weather.*;
 
 public class JetPlane extends Aircraft implements Flyable {
 
@@ -18,8 +17,7 @@ public class JetPlane extends Aircraft implements Flyable {
         int HeightCopy = this.coordinates.getHeight();
         int LongCopy = this.coordinates.getLongitude();
         int LatiCop = this.coordinates.getLatitude();
-        String weather = this.NweatherTower.getWeather(this.coordinates);
-
+        String weather = this.weatherTower.getWeather(this.coordinates);
 
         switch (weather)
         {
@@ -41,20 +39,19 @@ public class JetPlane extends Aircraft implements Flyable {
                 break;
         }
 
-        public void registerTower (WeatherTower weatherTower)
-        {
-            writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Registered");
-            this.NweatherTower = weatherTower;
-            weatherTower.register(this);
+    }
+    public void registerTower (WeatherTower weatherTower)
+    {
+        writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Registered");
+        this.weatherTower = weatherTower;
+        weatherTower.register(this);
 
-        }
+    }
 
-        public void unregisterTower (WeatherTower weatherTower)
-        {
-            writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Unegistered");
-            this.NweatherTower = weatherTower;
-            weatherTower.unregister(this);
-
-        }
+    public void unregisterTower (WeatherTower weatherTower)
+    {
+        writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Unegistered");
+        this.weatherTower = weatherTower;
+        weatherTower.unregister(this);
     }
 }

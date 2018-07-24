@@ -5,6 +5,7 @@ import java.lang.*;
 import java.util.*;
 import Sim_Package.Aircraft.*;
 import Sim_Package.Weather.*;
+import Sim_Package.WriteToFile;
 
 /*
     Gathering everithing here, simulation and reading happens
@@ -13,7 +14,7 @@ public class Main
 {
     private static WeatherTower weatherTower;
     private static List<Flyable> flyables = new ArrayList<Flyable>();
-    private static WriteToFile writr = new WriteToFile();
+    private static WriteToFile writer = new WriteToFile();
     public static void main(String args[])
     {
 
@@ -33,7 +34,6 @@ public class Main
                 }
                 while ((line = reader.readLine()) != null)
                 {
-                    //System.out.println(line);
                     Flyable flyable = AircraftFactory.newAircraft(line.split(" ")[0], line.split(" ")[1],
                             Integer.parseInt(line.split(" ")[2]), Integer.parseInt(line.split(" ")[3]),
                             Integer.parseInt(line.split(" ")[4]));
@@ -47,7 +47,6 @@ public class Main
                     flyable.registerTower(weatherTower);
                 }
                 for (int i = 1; i <= simulations; i++) {
-                    //writer.writetofile("simulation: " + i);
                     weatherTower.changeWeather();
                 }
             }
@@ -64,7 +63,7 @@ public class Main
         } catch (NumberFormatException e) {
             System.out.println("not a valid number entered in file");
         } finally {
-            writr.closeFile();
+            writer.closeFile();
         }
     }
 }
