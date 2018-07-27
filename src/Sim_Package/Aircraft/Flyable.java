@@ -7,3 +7,6 @@ public interface Flyable {
     public void registerTower(WeatherTower weatherTower);
     public void unregisterTower(WeatherTower weatherTower);
 }
+
+//interface
+//Implimanted all by all flyables

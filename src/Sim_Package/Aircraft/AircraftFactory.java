@@ -1,7 +1,8 @@
 package Sim_Package.Aircraft;
 
 import Sim_Package.Coordinates;
-import Sim_Package.Weather.WeatherTower;
+
+//Creating all flyables
 
 public class AircraftFactory {
 

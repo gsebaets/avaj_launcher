@@ -38,6 +38,10 @@ public class Helicopter extends Aircraft implements Flyable {
                 writer.writetofile("Helicopter#" + this.name + "(" + this.id + "): AAAAAAAA it blinds, it melts my ICE");
                 break;
         }
+        if(this.coordinates.getHeight() < 0)
+        {
+            unregisterTower(this.weatherTower);
+        }
 
     }
 
