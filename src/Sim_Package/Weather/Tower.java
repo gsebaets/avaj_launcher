@@ -32,8 +32,9 @@ public class Tower {
     protected void conditionsChanged() //manupilate weather for all aircrafts
     {
         for (Flyable flyable : observers) {
-            flyable.updateConditions();
+           flyable.updateConditions();
         }
+
         observers.removeAll(unregistered); //remove from observers
     }
 }

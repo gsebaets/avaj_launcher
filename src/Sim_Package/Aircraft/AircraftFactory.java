@@ -13,13 +13,13 @@ public class AircraftFactory {
             Coordinates coordinates = new Coordinates(longitude, latitude, height);
 
             String Name = type.toLowerCase();
-            if (Name.equals("helicopter"))
-            {
-                return new Helicopter(name, coordinates);
-            }
-            else if(Name.equals("jetplane"))
+            if (Name.equals("jetplane"))
             {
                 return new JetPlane(name, coordinates);
+            }
+            else if(Name.equals("helicopter"))
+            {
+                return new Helicopter(name, coordinates);
             }
             else if(Name.equals("baloon"))
             {
@@ -30,8 +30,10 @@ public class AircraftFactory {
                 System.exit(1);
                 return null;
         }
-        System.out.println("Number should be POSITIVE(+)");
-        System.exit(1);
-        return null;
+        else {
+            System.out.println("Number should be POSITIVE(+)");
+            System.exit(1);
+            return null;
+        }
     }
 }

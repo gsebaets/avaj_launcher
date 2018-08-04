@@ -1,7 +1,7 @@
 package Sim_Package.Aircraft;
 
 import Sim_Package.Coordinates;
-import Sim_Package.Weather.WeatherTower;
+import Sim_Package.Weather.*;
 
 public class Baloon extends Aircraft implements Flyable {
 
@@ -42,17 +42,16 @@ public class Baloon extends Aircraft implements Flyable {
         {
             unregisterTower(this.weatherTower);
         }
-
     }
 
     public void registerTower(WeatherTower weatherTower) {
         writer.writetofile("Tower :" + "Baloon#" + this.name + "(" + this.id + ") Registered");
         this.weatherTower = weatherTower;
-        weatherTower.unregister(this);
+        weatherTower.register(this);
     }
 
     public void unregisterTower(WeatherTower weatherTower) {
-        writer.writetofile("Tower :" + "Baloon#" + this.name + "(" + this.id + ") Unegistered");
+        writer.writetofile("Tower :" + "Baloon#" + this.name + "(" + this.id + ") Unregistered");
         this.weatherTower = weatherTower;
         weatherTower.unregister(this);
     }

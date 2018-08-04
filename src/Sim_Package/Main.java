@@ -5,7 +5,6 @@ import java.lang.*;
 import java.util.*;
 import Sim_Package.Aircraft.*;
 import Sim_Package.Weather.*;
-import Sim_Package.WriteToFile;
 
 /*
     Gathering everithing here, simulation and reading happens

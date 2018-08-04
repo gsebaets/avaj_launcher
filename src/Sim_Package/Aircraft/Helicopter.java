@@ -38,7 +38,7 @@ public class Helicopter extends Aircraft implements Flyable {
                 writer.writetofile("Helicopter#" + this.name + "(" + this.id + "): AAAAAAAA it blinds, it melts my ICE");
                 break;
         }
-        if(this.coordinates.getHeight() < 0)
+        if(HeightCopy < 0)
         {
             unregisterTower(this.weatherTower);
         }
@@ -48,7 +48,7 @@ public class Helicopter extends Aircraft implements Flyable {
     public void registerTower(WeatherTower weatherTower) {
         writer.writetofile("Tower :" + "Helicopter#" + this.name + "(" + this.id + ") Registered");
         this.weatherTower = weatherTower;
-        weatherTower.unregister(this);
+        weatherTower.register(this);
     }
 
     public void unregisterTower(WeatherTower weatherTower) {
