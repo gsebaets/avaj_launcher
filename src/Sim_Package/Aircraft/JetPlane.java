@@ -57,7 +57,7 @@ public class JetPlane extends Aircraft implements Flyable {
 
     public void unregisterTower (WeatherTower weatherTower)
     {
-        writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Unegistered");
+        writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Unregistered");
         this.weatherTower = weatherTower;
         weatherTower.unregister(this);
     }

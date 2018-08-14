@@ -56,7 +56,7 @@ public class Helicopter extends Aircraft implements Flyable {
     }
 
     public void unregisterTower(WeatherTower weatherTower) {
-        writer.writetofile("Tower :" + "Helicopter#" + this.name + "(" + this.id + ") Unegistered");
+        writer.writetofile("Tower :" + "Helicopter#" + this.name + "(" + this.id + ") Unregistered");
         this.weatherTower = weatherTower;
         weatherTower.unregister(this);
     }
