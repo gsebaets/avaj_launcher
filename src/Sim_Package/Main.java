@@ -7,7 +7,7 @@ import Sim_Package.Aircraft.*;
 import Sim_Package.Weather.*;
 
 /*
-    Gathering everithing here, simulation and reading happens
+    Gathering everything here, simulation and reading happens
 */
 public class Main
 {

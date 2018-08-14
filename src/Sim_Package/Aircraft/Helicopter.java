@@ -42,7 +42,7 @@ public class Helicopter extends Aircraft implements Flyable {
                 writer.writetofile("unknown weather: ");
                 break;
         }
-        if(this.coordinates.getHeight() < 0)
+        if(this.coordinates.getHeight() <= 0)
         {
             unregisterTower(this.weatherTower);
         }

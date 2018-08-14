@@ -41,7 +41,7 @@ public class Baloon extends Aircraft implements Flyable {
                 writer.writetofile("unknown weather: ");
                 break;
         }
-        if(HeightCopy < 0)
+        if(this.coordinates.getHeight() <= 0)
         {
             unregisterTower(this.weatherTower);
         }

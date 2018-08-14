@@ -26,12 +26,12 @@ public class AircraftFactory {
                 return new Baloon(name, coordinates);
             }
             else
-                System.out.println("Not a legit flyable.");
+                System.out.println("Not a legit flyable. The flyable is not in our system");
                 System.exit(1);
                 return null;
         }
         else {
-            System.out.println("Number should be POSITIVE(+)");
+            System.out.println("Number should be POSITIVE(+),  No NEGATIVES allowed");
             System.exit(1);
             return null;
         }
