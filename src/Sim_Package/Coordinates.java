@@ -7,39 +7,41 @@ public class Coordinates {
 
     public Coordinates(int longitude, int latitude, int height)
     {
-        longitude = longitude;
-        latitude = latitude;
+        this.longitude = longitude;
+        this.latitude = latitude;
 
-        if(height > 100) {
-            height = 100;
+        if(this.height > 100) {
+            this.height = 100;
         }
-        else if (height < 0) {
-            height = 0;
+        else if (this.height < 0) {
+            this.height = 0;
         }
-        else height = height;
+        else this.height = height;
     }
 
     public int getLongitude() {
-        return longitude;
-    }
 
-    public void setLongitude(int longitude) {
-        this.longitude = longitude;
+        return this.longitude;
     }
 
     public int getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(int latitude) {
-        this.latitude = latitude;
+        return this.latitude;
     }
 
     public int getHeight() {
-        return height;
+        return this.height;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public void setLongitude(int newLong) {
+
+        this.longitude += newLong;
+    }
+
+    public void setLatitude(int newLati) {
+        this.latitude += newLati;
+    }
+
+    public void setHeight(int newHeight) {
+        this.height += newHeight;
     }
 }

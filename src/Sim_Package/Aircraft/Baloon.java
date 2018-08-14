@@ -37,8 +37,11 @@ public class Baloon extends Aircraft implements Flyable {
                 this.coordinates = new Coordinates(LongCopy + 2, LatiCop, HeightCopy + 4);
                 writer.writetofile("Baloon#" + this.name + "(" + this.id + "): AAAAAAAA it blinds, it melts my ICE");
                 break;
+            default:
+                writer.writetofile("unknown weather: ");
+                break;
         }
-        if(this.coordinates.getHeight() < 0)
+        if(HeightCopy < 0)
         {
             unregisterTower(this.weatherTower);
         }

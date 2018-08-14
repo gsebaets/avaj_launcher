@@ -37,8 +37,12 @@ public class Helicopter extends Aircraft implements Flyable {
                 this.coordinates = new Coordinates(LongCopy + 10, LatCopy, HeightCopy + 2);
                 writer.writetofile("Helicopter#" + this.name + "(" + this.id + "): AAAAAAAA it blinds, it melts my ICE");
                 break;
+
+            default:
+                writer.writetofile("unknown weather: ");
+                break;
         }
-        if(HeightCopy < 0)
+        if(this.coordinates.getHeight() < 0)
         {
             unregisterTower(this.weatherTower);
         }
