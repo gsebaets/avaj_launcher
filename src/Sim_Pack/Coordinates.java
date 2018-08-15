@@ -1,4 +1,4 @@
-package Sim_Package;
+package Sim_Pack;
 
 public class Coordinates {
     private int longitude;

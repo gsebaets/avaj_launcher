@@ -1,6 +1,6 @@
-package Sim_Package.Weather;
+package Sim_Pack.Weather;
 
-import Sim_Package.Coordinates;
+import Sim_Pack.Coordinates;
 
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates){

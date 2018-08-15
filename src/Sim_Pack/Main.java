@@ -1,10 +1,14 @@
-package Sim_Package;
+package Sim_Pack;
 
 import java.io.*;
 import java.lang.*;
 import java.util.*;
-import Sim_Package.Aircraft.*;
-import Sim_Package.Weather.*;
+
+import Sim_Pack.Aircraft.AircraftFactory;
+import Sim_Pack.Aircraft.Flyable;
+import Sim_Pack.Weather.WeatherTower;
+import Sim_Pack.Aircraft.*;
+import Sim_Pack.Weather.*;
 
 /*
     Gathering everything here, simulation and reading happens
@@ -14,6 +18,8 @@ public class Main
     private static WeatherTower weatherTower;
     private static List<Flyable> flyables = new ArrayList<Flyable>();
     private static WriteToFile writer = new WriteToFile();
+
+
     public static void main(String args[])
     {
 

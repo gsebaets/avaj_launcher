@@ -1,7 +1,7 @@
-package Sim_Package.Aircraft;
+package Sim_Pack.Aircraft;
 
-import Sim_Package.Coordinates;
-import Sim_Package.Weather.WeatherTower;
+import Sim_Pack.Coordinates;
+import Sim_Pack.Weather.WeatherTower;
 
 public class Helicopter extends Aircraft implements Flyable {
 

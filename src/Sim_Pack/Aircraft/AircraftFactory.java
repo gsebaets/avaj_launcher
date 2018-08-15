@@ -1,6 +1,6 @@
-package Sim_Package.Aircraft;
+package Sim_Pack.Aircraft;
 
-import Sim_Package.Coordinates;
+import Sim_Pack.Coordinates;
 
 //Creating all flyables
 

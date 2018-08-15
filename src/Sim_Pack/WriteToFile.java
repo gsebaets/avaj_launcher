@@ -1,4 +1,4 @@
-package Sim_Package;
+package Sim_Pack;
 
 import java.io.BufferedWriter;
 import java.io.File;

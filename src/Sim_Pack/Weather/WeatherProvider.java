@@ -1,6 +1,6 @@
-package Sim_Package.Weather;
+package Sim_Pack.Weather;
 
-import Sim_Package.Coordinates;
+import Sim_Pack.Coordinates;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
-package Sim_Package.Weather;
+package Sim_Pack.Weather;
 
-import Sim_Package.Aircraft.Flyable;
+import Sim_Pack.Aircraft.Flyable;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package Sim_Package.Aircraft;
+package Sim_Pack.Aircraft;
 
-import Sim_Package.Weather.WeatherTower;
+import Sim_Pack.Weather.WeatherTower;
 
 public interface Flyable {
     public void updateConditions();

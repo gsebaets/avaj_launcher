@@ -1,13 +1,14 @@
-package Sim_Package.Aircraft;
+package Sim_Pack.Aircraft;
 
-import Sim_Package.Coordinates;
-import Sim_Package.Weather.*;
+import Sim_Pack.Coordinates;
+import Sim_Pack.Weather.WeatherTower;
+import Sim_Pack.Weather.*;
 
-public class Baloon extends Aircraft implements Flyable {
+public class JetPlane extends Aircraft implements Flyable {
 
     private WeatherTower weatherTower;
 
-    Baloon(String name, Coordinates coordinates) {
+    JetPlane(String name, Coordinates coordinates) {
 
         super(name, coordinates);
     }
@@ -23,19 +24,19 @@ public class Baloon extends Aircraft implements Flyable {
         {
             case "RAIN":
                 this.coordinates = new Coordinates(LongCopy, LatiCop, HeightCopy - 5);
-                writer.writetofile("Baloon#" + this.name + "(" + this.id + "): Let it RAIN, let it wash away my PAIN");
+                writer.writetofile("JetPlane#" + this.name + "(" + this.id + "): Let it RAIN, let it wash away my PAIN");
                 break;
             case "SNOW":
                 this.coordinates = new Coordinates(LongCopy, LatiCop, HeightCopy - 15);
-                writer.writetofile("Baloon#" + this.name + "(" + this.id + "): Elsa : Let it go, Let it goooo");
+                writer.writetofile("JetPlane#" + this.name + "(" + this.id + "): Elsa : Let it go, Let it goooo");
                 break;
             case "FOG":
                 this.coordinates = new Coordinates(LongCopy, LatiCop, HeightCopy - 3);
-                writer.writetofile("Baloon#" + this.name + "(" + this.id + "): What the FOG is going on?");
+                writer.writetofile("JetPlane#" + this.name + "(" + this.id + "): What the FOG is going on?");
                 break;
             case "SUN":
                 this.coordinates = new Coordinates(LongCopy + 2, LatiCop, HeightCopy + 4);
-                writer.writetofile("Baloon#" + this.name + "(" + this.id + "): AAAAAAAA it blinds, it melts my ICE");
+                writer.writetofile("JetPlane#" + this.name + "(" + this.id + "): AAAAAAAA it blinds, it melts my ICE");
                 break;
             default:
                 writer.writetofile("unknown weather: ");
@@ -45,16 +46,19 @@ public class Baloon extends Aircraft implements Flyable {
         {
             unregisterTower(this.weatherTower);
         }
-    }
 
-    public void registerTower(WeatherTower weatherTower) {
-        writer.writetofile("Tower :" + "Baloon#" + this.name + "(" + this.id + ") Registered");
+    }
+    public void registerTower (WeatherTower weatherTower)
+    {
+        writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Registered");
         this.weatherTower = weatherTower;
         weatherTower.register(this);
+
     }
 
-    public void unregisterTower(WeatherTower weatherTower) {
-        writer.writetofile("Tower :" + "Baloon#" + this.name + "(" + this.id + ") Unregistered");
+    public void unregisterTower (WeatherTower weatherTower)
+    {
+        writer.writetofile("Tower :" + "JetPlane#" + this.name + "(" + this.id + ") Unregistered");
         this.weatherTower = weatherTower;
         weatherTower.unregister(this);
     }

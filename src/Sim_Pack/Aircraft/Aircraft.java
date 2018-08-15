@@ -1,7 +1,7 @@
-package Sim_Package.Aircraft;
+package Sim_Pack.Aircraft;
 
-import Sim_Package.Coordinates;
-import Sim_Package.WriteToFile;
+import Sim_Pack.Coordinates;
+import Sim_Pack.WriteToFile;
 
 public class Aircraft {
     protected long id;
